@@ -1,0 +1,217 @@
+:root {
+  --primary-color: #333;
+  ---secondary-color: #444;
+  ---overlay-color: rgba(0, 0, 0, 0.9);
+}
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: minion-pro, serif;
+font-weight: 400;
+font-style: normal;
+font-size: 1.1rem;
+}
+
+h1, h2, h3, h4 {
+  line-height: 1.3;
+}
+
+a {
+  color: var(--seondary-color);
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+
+img {
+  width: 100%;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 2rem;
+
+}
+.navbar {
+  font-size: 1.2rem;
+  padding: 0.3rem;
+  padding-bottom: 0.3rem;
+}
+
+/*section a content*/
+.navbar .container {
+  display: grid;
+  grid-template-colums: repeat(2, 1fr);
+}
+
+.navbar .logo {
+  font-size: 2rem;
+}
+
+.navbar .nav {
+justify-self:flex-end;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.navbar .nav a {
+padding: 0 1rem;
+}
+
+.navbar .nav a:hover {
+color: #555;
+}
+
+.section-a {
+  margin: 2rem 0;
+}
+.section-a .container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 3rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-a h1 {
+  font-size: 4rem;
+  color: var(--primary-color);
+}
+
+.section-a p {
+  margin: 1rem 0;
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  padding: 8px;
+}
+
+.btn:hover {
+  background: var(--secondary-color);
+}
+
+
+
+/*section b content*/
+.section-b {
+  position: relative;
+  background: url('/Users/josephnoble/Downloads/brett-jordan-x0x-jMEixZI-unsplash.jpg') no-repeat bottom center/cover;
+  height: 600px;
+}
+
+
+.section-b-inner {
+color: white;
+height: 100%;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+text-align: center;
+margin: auto;
+max-width: 860px;
+padding: 5rem 0;
+}
+
+.section-b-inner h3 {
+  font-size: 2rem;
+}
+
+.section-b-inner p {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+.section-b-inner h2 {
+  font-size: 5rem;
+  margin-top: 1rem;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--overlay-color);
+}
+
+
+/*footer*/
+.section-footer {
+background: var(--primary-color);
+color: #fff;
+padding: 4rem;
+}
+
+.section-footer .container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem;
+}
+
+.section-footer h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+
+}
+
+.section-footer: h3 {
+  margin-bottom: .7rem;
+}
+
+.section-footer {
+  line-height: 1.9;
+  color: #ccc;
+}
+
+@media(max-width: 700px) {
+  .section-a .container{
+    grid-template-columns: 1fr;
+    text-allign: center;
+  }
+  .section-a .container div:first-child {
+    order: 2;
+  }
+  .section-a .container div:last-child {
+    order: -1;
+}
+.section-a img {
+  width: 80%;
+  margin: auto;
+}
+
+.section-b-inner h2{
+  font-size: 3.2rem;
+}
+.section-footer {
+  padding: 2rem 0;
+}
+.section-footer .container {
+  grid-template-columns: 1fr;
+  text-align: center;
+}
+.section-footer div:nth-child(2),
+.section-footer div:nth-child(2) {
+  display: none;
+}
+}
